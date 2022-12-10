@@ -22,18 +22,5 @@
   </div>
 </div>
 
+<app-empleado *ngFor="let empleado of empleados index as i " [empleadoDeLista]="empleado" [indice]="i" ></app-empleado>
 
-
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div *ngFor="let empleado of empleados index as i ">
-        {{i+1}} ) {{empleado.nombre}}
-        {{empleado.apellido}}
-        {{empleado.cargo}}
-        {{empleado.salario | currency}}
-      </div>
-    </div>
-  </div>
-</div>
