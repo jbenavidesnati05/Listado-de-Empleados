@@ -28,8 +28,4 @@ export class AppComponent {
     this.cuadroCargo = " ";
     this.cuadroSalario = 0;
   }
-  miEmpleado(miEmpleado: any) {
-    throw new Error('Method not implemented.');
-  }
-
 }
