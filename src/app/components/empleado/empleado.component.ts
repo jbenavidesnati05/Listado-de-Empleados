@@ -17,4 +17,11 @@ export class EmpleadoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  arrayCaracteristica= [""];
+
+  agregarCaracteristica(nuevaCaracteristica:string){
+    this.arrayCaracteristica.push(nuevaCaracteristica)
+
+  }
+
 }

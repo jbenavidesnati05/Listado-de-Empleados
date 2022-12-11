@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
+import { CaractEmpleadoComponent } from './components/caract-empleado/caract-empleado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmpleadoComponent
+    EmpleadoComponent,
+    CaractEmpleadoComponent
   ],
   imports: [
     BrowserModule,
