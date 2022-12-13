@@ -1,26 +1,28 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h2 style="text-align: center;">{{titulo}}</h2>
-      <form class="form-group row">
-        <div class="form-group col-md-3">
-          <label for="nombre">Nombre:</label>
-          <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="cuadroNombre">
-          <label for="nombre">Apellido:</label>
-          <input class="form-control" type="text" name="apellido" id="apelluido" placeholder="apellido" [(ngModel)]="cuadroApellido">
-          <label for="nombre">Cargo:</label>
-          <input class="form-control" type="text" name="cargo" id="cargo" placeholder="cargo" [(ngModel)]="cuadroCargo">
-          <label for="nombre">Salario:</label>
-          <input class="form-control" type="text" name="salario" id="salario" placeholder="salario" [(ngModel)]="cuadroSalario">
-        </div>
-        <div class="col">
-          <button class="btn btn-dark mt-3 mb-3" type="submit" (click)="agregarEmpleado()">Agregar Empleado</button>
-        </div>
-      </form>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">EMPLEADOS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/proyectos">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/quienes">Quienes somos?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contacto">Contacto</a>
+        </li>
 
+      </ul>
     </div>
   </div>
-</div>
+</nav>
 
-<app-empleado *ngFor="let empleado of empleados index as i " [empleadoDeLista]="empleado" [indice]="i" ></app-empleado>
 
+<router-outlet></router-outlet>

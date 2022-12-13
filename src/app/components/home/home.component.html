@@ -1,0 +1,28 @@
+
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 style="text-align: center;">{{titulo}}</h2>
+        <form class="form-group row">
+          <div class="form-group col-md-3">
+            <label for="nombre">Nombre:</label>
+            <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="cuadroNombre">
+            <label for="nombre">Apellido:</label>
+            <input class="form-control" type="text" name="apellido" id="apelluido" placeholder="apellido" [(ngModel)]="cuadroApellido">
+            <label for="nombre">Cargo:</label>
+            <input class="form-control" type="text" name="cargo" id="cargo" placeholder="cargo" [(ngModel)]="cuadroCargo">
+            <label for="nombre">Salario:</label>
+            <input class="form-control" type="text" name="salario" id="salario" placeholder="salario" [(ngModel)]="cuadroSalario">
+          </div>
+          <div class="col">
+            <button class="btn btn-dark mt-3 mb-3" type="submit" (click)="agregarEmpleado()">Agregar Empleado</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <app-empleado *ngFor="let empleado of empleados index as i " [empleadoDeLista]="empleado" [indice]="i" ></app-empleado>
+

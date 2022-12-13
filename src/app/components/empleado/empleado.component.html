@@ -3,13 +3,16 @@
   <div class="row">
     <div class="col">
       <div>
-        {{indice+1}}  {{empleadoDeLista.nombre}} {{empleadoDeLista.apellido}} {{empleadoDeLista.cargo}} {{empleadoDeLista.salario | currency}}
+        <!-- enrutar con un ancla  -->
+        <a [routerLink]="['/modificar',indice]">
+          {{indice+1}}  {{empleadoDeLista.nombre}} {{empleadoDeLista.apellido}} {{empleadoDeLista.cargo}} {{empleadoDeLista.salario | currency}}
+        </a>
       </div>
       <ul style="list-style: none;">
         <li *ngFor="let caracteristica of arrayCaracteristica">{{caracteristica}}</li>
       </ul>
-      <app-caract-empleado (caracteriticasEmpleados)="agregarCaracteristica($event)"></app-caract-empleado>
     </div>
+    <app-caract-empleado (caracteriticasEmpleados)="agregarCaracteristica($event)"></app-caract-empleado>
   </div>
 </div>
 
