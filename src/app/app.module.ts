@@ -15,6 +15,10 @@ import { QuienesComponent } from './components/quienes/quienes.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ModificarComponent } from './components/modificar/modificar.component';
+import { DataService } from './services/data.service';
+// importando modulo Http
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
 
 // declarando las rutas
 const appRoutes:Routes = [
@@ -22,8 +26,8 @@ const appRoutes:Routes = [
   { path: "proyectos",component: ProyectosComponent},
   { path: "quienes",component: QuienesComponent},
   { path: "contacto",component: ContactoComponent},
-  { path: "modificar/:id",component: ModificarComponent}
-
+  { path: "modificar/:id",component: ModificarComponent},
+  { path: "login",component: LoginComponent},
 ]
 
 @NgModule({
@@ -36,7 +40,8 @@ const appRoutes:Routes = [
     ProyectosComponent,
     QuienesComponent,
     ContactoComponent,
-    ModificarComponent
+    ModificarComponent,
+    LoginComponent
   ],
   // importar el router module
   imports: [
@@ -44,10 +49,13 @@ const appRoutes:Routes = [
     AppRoutingModule,
     FormsModule,
     // llamamos la varibe de routes
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    // para conexion firebase
+    HttpClientModule
+
   ],
   // 2 registrar servicios
-  providers: [ ServiceEmpService,EmpDataService],
+  providers: [ ServiceEmpService,EmpDataService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
